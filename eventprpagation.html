@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #parent{
+        height: 250px;
+        width: 50%;
+        border: 1px solid #000;
+        align-items: center;
+        
+    }
+    #child{
+        height: 50%;
+        width: 50%;
+        border: 1px solid #ef0d0d;
+    }
+    .main{
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="main">
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</div>
+<script>
+    const parent = document.getElementById("parent");
+    const child = document.getElementById("child");
+    
+   const  parentCall =()=>{
+    alert("Parent Div is now")
+   }
+   const childCall =()=>{
+    alert("Child is now")
+    // event.stopPropagation() jab hme child k badd hi rokna ho 
+   }
+// by default false rhte h isliye bubleing krte h 
+   parent.addEventListener("click",parentCall,true)
+   child.addEventListener("click",childCall,true)
+</script>
+</body>
+
+</html>
