@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
+<body>
+    <h1>Thermometer <span id="icon" class="fa"><span></h1>
+
+
+    <script>
+        const temp =()=>{
+            let tempIcon = document.getElementById('icon')
+            tempIcon.innerHTML="&#xf2cb";
+            tempIcon.style.color='black';
+            tempIcon.style.fontSize='80px';
+            setTimeout(()=>{
+                tempIcon.innerHTML="&#xf2ca";
+            tempIcon.style.color='orange';
+            },1000)
+            setTimeout(()=>{
+                tempIcon.innerHTML="&#xf2c9";
+            tempIcon.style.color='orange';
+            },2000)
+            setTimeout(()=>{
+                tempIcon.innerHTML="&#xf2c8";
+            tempIcon.style.color='orange';
+            },3000)
+            setTimeout(()=>{
+                tempIcon.innerHTML="&#xf2c7";
+            tempIcon.style.color='red';
+            },4000)
+        }
+        temp ();
+        setInterval(temp , 5000);
+    </script>
+</body>
+</html>

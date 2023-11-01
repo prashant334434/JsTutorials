@@ -2720,14 +2720,6 @@
 
 // sum(5)(3)(8);
 
-// // **********************************************************************
-
-// // 👉 // 🤩 SUBSCRIBE TO THAPA TECHNICAL YOUTUBE CHANNEL 🤩
-//  👉 // 🤩  https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
-
-// // **********************************************************************
-
-
 
 // // 8️⃣: CallBack Hell 
 
@@ -2804,5 +2796,5 @@
 // request.addEventListener("load", () => {
 //     console.log(this.responseText);
 // });
-
+// https://restcountries.eu/rest/v2/name/nepal
 

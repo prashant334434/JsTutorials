@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div >
+        <div class="counter">
+            <i class="fas fa-coffee fa-3x" style="color: black;"></i>
+            <p>Project Completed</p>
+            <div id="counter" data-target="4000"></div>
+        </div>
+        <div class="counter">
+            <i class="fas fa-users fa-3x" style="color: black;"></i>
+            <p>Happy Customers</p>
+            <div id="counter" data-target="1500"></div>
+        </div>
+        <div class="counter">
+            <i class="fas fa-list-check fa-3x" style="color: black;"></i>
+            <p>Project Delivered</p>
+            <div id="counter" data-target="500"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const counters = document.querySelectorAll('#counter');
+    //  console.log(counters)
+    counters.forEach((counter)=>{
+    //    console.log(counter)
+    counter.innerHTML = 0;
+    const updateCounter=()=>{
+        const targetCounter =+counter.getAttribute('data-target');
+        // console.log(targetCounter)
+        const startingCounter = Number(counter.innerHTML)
+        const incre = targetCounter/  100
+        if(startingCounter<targetCounter){
+            counter.innerHTML = `${Math.round(startingCounter+incre)}`
+            setTimeout(updateCounter,10)
+        }else{
+            counter.innerHTML=targetCounter;
+        }
+
+    }
+    updateCounter()
+
+    })
+
+</script>
+</html>
